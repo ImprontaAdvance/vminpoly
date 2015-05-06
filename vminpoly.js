@@ -190,8 +190,8 @@
       sheet.value = rules;
       return rules;
     };
-    onresize = function(isVminpolyMinSize) {
-      if (isVminpolyMinSize())
+    onresize = function() {
+      if (!!isVminpolyMinSize && isVminpolyMinSize())
         return false;
       
       var css, dims, generateRuleCode, generateSheetCode, map, sheet, url, vpAspectRatio, vpDims;
