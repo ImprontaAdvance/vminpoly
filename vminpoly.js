@@ -190,7 +190,10 @@
       sheet.value = rules;
       return rules;
     };
-    onresize = function() {
+    onresize = function(isVminpolyMinSize) {
+      if (isVminpolyMinSize())
+        return false;
+      
       var css, dims, generateRuleCode, generateSheetCode, map, sheet, url, vpAspectRatio, vpDims;
       vpDims = getViewportSize();
       dims = {
